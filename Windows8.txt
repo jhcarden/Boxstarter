@@ -1,0 +1,19 @@
+Update-ExecutionPolicy Unrestricted
+Set-ExplorerOptions -showHiddenFilesFoldersDrives -showProtectedOSFiles -showFileExtensions
+Enable-RemoteDesktop
+
+cinst TelnetClient -source windowsFeatures
+
+cinst googlechrome
+cinst firefox
+cinst javaruntime
+cinst flashplayerplugin
+cinst sysinternals
+cinst 7zip
+cinst notepadplusplus
+cinst adobereader
+cinst putty
+
+Install-ChocolateyPinnedTaskBarItem "$env:windir\system32\mstsc.exe"
+
+Install-WindowsUpdate -AcceptEula
